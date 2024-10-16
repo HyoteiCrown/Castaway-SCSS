@@ -1,0 +1,161 @@
+.third-screen{
+    margin-top: 160px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    @mixin link {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--color-blue);
+        font-family: var(--regular);
+        font-weight: 400;
+        font-size: 18px;
+      }
+      @mixin link-hover{
+        text-decoration: underline;
+        color: var(--color-white);
+        cursor: pointer;
+      }
+      @mixin header {
+        display: block;
+        font-family: var(--regular);
+        font-weight: 400;
+        font-size: 65px;
+        text-align: left;
+        line-height: 80px;
+        color: var(--color-white);
+        letter-spacing: 2.88px;
+      }
+      @mixin text {
+        display: block;
+        font-family: var(--regular);
+        font-weight: 400;
+        font-size: 22px;
+        text-align: left;
+        color: var(--color-nudeblue);
+        letter-spacing: 0%;
+        line-height: 33px;
+      }
+      @mixin item-button {
+        display: block;
+        width: 208px;
+        height: 51px;
+        white-space: nowrap;
+        padding: 12px 20px;
+        @include core-button();
+        &:hover {
+          @include button-hover();
+        }
+      }
+      @mixin core-button {
+        color: var(--color-white);
+        background-color: var(--color-blue);
+        font-family: var(--regular);
+        font-size: 18px;
+        font-weight: 400;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+      }
+      @mixin button-hover {
+        background-color: transparent;
+        color: var(--color-blue);
+        border: 1px solid var(--color-blue);
+      }
+
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        
+    
+
+        &_round-button{
+            margin-bottom: 20px;
+        }
+
+        &_link{
+            @include link();
+            &:hover{
+                @include link-hover();
+            }
+        }
+        
+        &_header{
+            @include header();
+            margin-bottom: 28px;
+
+        }
+        &_text{
+            @include text();
+        }
+        &_input{
+          margin-top: 200px;
+          display: flex;
+          background-color: #000;
+          padding: 60px;
+          border-radius: 32px;
+          width: 100%;
+          align-items: center;
+          gap: 75px;
+          justify-content: space-around;
+          
+          
+          &_case1{
+            &_link{
+              @include link();
+              &:hover{
+                @include link-hover();
+              }
+            
+            }
+            &_header{
+              @include header();
+            }
+          }
+          &_case2{
+            width: 522px;
+            &_form{
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              align-items: center;
+              &_field{
+                width: 522px;
+                height: 82px;
+                background-color: var(--color-dark);
+                outline: none;
+                border: none;
+                color:var(--color-nudeblue);
+                font-family: var(--regular);
+                &:hover{
+                  border: 1px solid var(--color-nudeblue)
+                }
+              
+                &placeholder{
+                  color:var(--color-nudeblue);
+                  font-family: var(--regular);
+                }
+              }
+    
+            
+            }
+            &_form_button{
+              @include item-button();
+              width: 87px;
+              height: 48px;
+              text-align: center;
+              padding: 0;
+            }
+          }
+      
+
+        }
+    }
+
+
+}

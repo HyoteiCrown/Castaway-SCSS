@@ -1,0 +1,231 @@
+.second-screen {
+    margin: 100px 50px;
+  $semi-dark: rgb(25, 25, 25);
+  @mixin core-button {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    font-family: var(--regular);
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+  }
+  @mixin button-hover {
+    background-color: transparent;
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+  }
+  @mixin link-hover{
+    text-decoration: underline;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+  @mixin label {
+    color: var(--color-white);
+    font-family: var(--regular);
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    text-align: center;
+    background-color: $semi-dark;
+  }
+  @mixin link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-blue);
+    font-family: var(--regular);
+    font-weight: 400;
+    font-size: 17px;
+  }
+  @mixin header {
+    display: block;
+    font-family: var(--regular);
+    font-weight: 400;
+    font-size: 64px;
+    text-align: left;
+    line-height: 70px;
+    color: var(--color-white);
+    letter-spacing: 2.56px;
+  }
+  @mixin text {
+    display: block;
+    font-family: var(--regular);
+    font-weight: 400;
+    font-size: 22px;
+    text-align: left;
+    color: var(--color-nudeblue);
+    letter-spacing: 0%;
+    line-height: 33px;
+  }
+  @mixin item-button {
+    display: block;
+    width: 208px;
+    height: 51px;
+    white-space: nowrap;
+    padding: 12px 20px;
+    @include core-button();
+    &:hover {
+      @include button-hover();
+    }
+  }
+
+  &__header {
+    display: flex;
+    font-family: var(--regular);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    &_title {
+      font-size: 64px;
+      font-weight: 400;
+      color: var(--color-white);
+    }
+    &_button {
+      @include core-button;
+      display: inline-block;
+      width: 208px;
+      height: 51px;
+      text-decoration: none;
+      line-height: 51px;
+      &:hover {
+        @include button-hover();
+      }
+    }
+  }
+  &__container {
+    margin-top: 40px;
+    display: grid;
+    gap: 100px;
+
+    &_item1 {
+      display: flex;
+      padding: 40px;
+      background-color: #000;
+      gap: 53px;
+      border-radius: 32px;
+      
+      &_img {
+        display: inline-block;
+        width: 389px;
+        height: 100%;
+      }
+      &_main {
+        display: flex;
+        flex-direction: column;
+        &_label {
+            margin-bottom: 48px;
+            width: 104px;
+            height: 27px;
+          @include label();
+          
+        }
+        &_link {
+            margin-bottom: 18px;
+          @include link();
+          &:hover{
+            @include link-hover();
+          }
+        }
+        &_header {
+            margin-bottom: 28px;
+          @include header();
+        }
+        &_text {
+            margin-bottom: 18px;
+          @include text();
+        }
+        &_button {
+          @include item-button();
+        }
+      }
+    }
+    
+    &_item2 {
+      display: flex;
+      padding: 40px;
+      background-color: #000;
+      gap: 53px;
+      border-radius: 32px;
+
+      &_img{
+        display: inline-block;
+        width: 389px;
+        height: 100%;
+      }
+      &_main {
+        display: flex;
+        flex-direction: column;
+        &_label {
+            margin-bottom: 48px;
+            width: 136px;
+            height: 27px;
+          @include label();
+        }
+        &_link {
+            margin-bottom: 18px;
+          @include link();
+          &:hover{
+            @include link-hover();
+          }
+        }
+        &_header {
+            margin-bottom: 28px;
+          @include header();
+        }
+        &_text {
+            margin-bottom: 18px;
+          @include text();
+        }
+        &_button {
+          @include item-button();
+        }
+      }
+    }
+
+    &_item3 {
+      display: flex;
+      padding: 40px;
+      background-color: #000;
+      gap: 53px;
+      border-radius: 32px;
+
+      &_img{
+        display: inline-block;
+        width: 389px;
+        height: 100%;
+      }
+      &_main {
+        display: flex;
+        flex-direction: column;
+        &_label {
+            margin-bottom: 48px;
+            width: 136px;
+            height: 27px;
+          @include label();
+        }
+        &_link {
+            margin-bottom: 18px;
+          @include link();
+          &:hover{
+            @include link-hover();
+          }
+        }
+        &_header {
+            margin-bottom: 28px;
+          @include header();
+        }
+        &_text {
+            margin-bottom: 18px;
+          @include text();
+        }
+        &_button {
+          @include item-button();
+        }
+      }
+    }
+    
+
+  }
+}

@@ -1,0 +1,58 @@
+.fourth-screen{
+    margin: 100px 50px;
+    @mixin card{
+        background-color: #000;
+        padding: 2rem;
+        border-radius: 32px;
+    }
+    @mixin author{
+        color: var(--color-nudeblue);
+    }
+    @mixin stars{
+        color: yellow;
+        margin-bottom: 1rem;
+    }
+    @mixin header {
+        display: block;
+        font-family: var(--regular);
+        font-weight: 400;
+        font-size: 36px;
+        text-align: left;
+        line-height: 43px;
+        color: var(--color-white);
+      }
+      @mixin text {
+        display: block;
+        font-family: var(--regular);
+        font-weight: 400;
+        font-size: 24px;
+        text-align: left;
+        color: var(--color-nudeblue);
+        letter-spacing: 0%;
+        line-height: 28px;
+      }
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        justify-content: space-between;
+        
+        &_card{
+            @include header();
+            @include card;
+            transition: transform 0.1s ease-in-out;
+            
+            
+        }
+
+        &_stars{
+            @include stars;
+        }
+
+        &_author{
+            @include text();
+            @include author();
+        }
+    }
+}

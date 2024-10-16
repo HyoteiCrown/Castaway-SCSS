@@ -1,0 +1,33 @@
+$regular: 400;
+$extra:500;
+$link:17px;
+header{
+    background-color: var(--color-dark);
+    .nav-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10vh;
+        align-items: center;
+        padding: 50px;
+
+        &__list{
+            font-family: var(--regular);
+            font-weight: $regular;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 40px;
+        }
+    
+        a{
+            text-decoration: none;
+            color: var(--color-white);
+            font-size: $link;
+        }
+
+        a:hover{color:var(--color-blue)}
+        
+    }
+
+}
